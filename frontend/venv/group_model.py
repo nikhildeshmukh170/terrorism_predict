@@ -6,7 +6,7 @@ import joblib
 
 rows_to_skip=[154710]
 # Load the dataset
-file_path = r'Backend\globalterrorismdataset.csv'
+file_path = r'frontend/venv/globalterrorismdataset.csv'
 df = pd.read_csv(file_path, encoding='ISO-8859-1', skiprows=rows_to_skip)  # Update with your dataset filename
 
 # Select useful features

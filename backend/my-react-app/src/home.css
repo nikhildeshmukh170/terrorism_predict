@@ -1,0 +1,32 @@
+/* Home.css */
+
+.home-container {
+    max-width: 800px; /* Set the maximum width of the container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Add some padding around the content */
+  }
+  
+  h1 {
+    font-size: 2.5rem; /* Set the font size of the heading */
+    margin-bottom: 20px; /* Add space below the heading */
+  }
+  
+  p {
+    font-size: 1.1rem; /* Set the font size of paragraphs */
+    line-height: 1.6; /* Set the line height for better readability */
+  }
+  
+  a {
+    display: inline-block; /* Make the link behave as a block element */
+    background-color: #007bff; /* Set the background color of the link */
+    color: #fff; /* Set the text color of the link */
+    padding: 10px 20px; /* Add padding around the link text */
+    text-decoration: none; /* Remove underline from the link */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    transition: background-color 0.3s; /* Add smooth transition for hover effect */
+  }
+  
+  a:hover {
+    background-color: #0056b3; /* Change background color on hover */
+  }
+  
