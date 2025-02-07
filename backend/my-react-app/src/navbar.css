@@ -1,55 +1,125 @@
 /* Navbar.css */
 
+/* 🌟 Glassmorphism Navbar */
 .navbar {
-    background-color: #333; /* Background color of the navbar */
-    padding: 20px; /* Padding around the navbar */
-  }
-  
-  .navbar ul {
-    list-style-type: none; /* Remove default list styles */
-    margin: 0;
-    padding: 0;
-    display: flex; /* Use flexbox layout */
-    justify-content: flex-end; /* Align items to the right side */
-  }
-  
-  .navbar li {
-    margin-left: 30px; /* Add spacing between list items */
-  }
-  
-  .navbar a {
-    color: white; /* Text color of navbar links */
-    text-decoration: none; /* Remove underline from links */
-  }
-  
-  .navbar a:hover {
-    text-decoration: underline; /* Add underline on hover */
-  }
-  
-  /* Navbar.css */
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  width: 95%;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  transition: all 0.4s ease-in-out;
+}
 
+/* 🔥 Navbar Links */
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* Navbar Items */
+.navbar a {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🎨 Fancy Hover Effect */
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  top: 0;
+  left: -100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar a:hover::after {
+  left: 0;
+}
+
+.navbar a:hover {
+  color: #ffeb3b;
+}
+
+/* 📌 Sticky Effect on Scroll */
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(12px);
+}
+
+/* 🎯 Subnavbar */
 .subnavbar {
-    background-color: #f0f0f0; /* Background color of the subnavbar */
-    padding: 10px; /* Padding around the subnavbar */
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  margin-top: 72px;
+  padding: 12px 0;
+  text-align: center;
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Subnavbar Links */
+.subnavbar ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.subnavbar a {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.subnavbar a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffeb3b;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+/* 🌍 Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      padding: 10px;
   }
-  
+
+  .navbar ul {
+      flex-direction: column;
+      gap: 10px;
+  }
+
   .subnavbar ul {
-    list-style-type: none; /* Remove default list styles */
-    margin: 0;
-    padding: 0;
+      flex-direction: column;
+      gap: 10px;
   }
-  
-  .subnavbar li {
-    display: inline; /* Display list items horizontally */
-    margin-right: 10px; /* Add spacing between list items */
-  }
-  
-  .subnavbar a {
-    color: #333; /* Text color of subnavbar links */
-    text-decoration: none; /* Remove underline from links */
-  }
-  
-  .subnavbar a:hover {
-    text-decoration: underline; /* Add underline on hover */
-  }
-  
+}

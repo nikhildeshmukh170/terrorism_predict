@@ -1,38 +1,69 @@
+/* App.css */
+
+/* 🌟 Centering App */
 .App {
   text-align: center;
 }
 
+/* 🚀 Animated Logo */
 .App-logo {
-  height: 40vmin;
+  height: 35vmin;
   pointer-events: none;
+  transition: transform 0.3s ease-in-out;
 }
 
+/* 🌀 Rotate animation */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 15s linear;
   }
 }
 
+/* 🏆 Modern Header */
 .App-header {
-  background-color: #282c34;
+  background: linear-gradient(135deg, #1e1e1e, #333);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: calc(12px + 2vmin);
+  color: #ffffff;
+  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.2);
+  padding: 20px;
 }
 
+/* 🔗 Stylish Links */
 .App-link {
-  color: #61dafb;
+  color: #ff5252;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out, transform 0.2s;
 }
 
+/* 🎯 Hover Effect */
+.App-link:hover {
+  color: #ff1744;
+  transform: scale(1.05);
+}
+
+/* 🎭 Keyframe Animations */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* 📌 Responsive Design */
+@media (max-width: 768px) {
+  .App-logo {
+    height: 30vmin;
+  }
+  .App-header {
+    font-size: calc(10px + 2vmin);
+    padding: 15px;
   }
 }
